@@ -15,15 +15,15 @@
   <meta property="og:url" content="https://www.thefangandflame.com/">
   <meta property="og:image" content="/fang-flame-logo.png">
 
-  <!-- Font for open-top ampersand -->
+  <!-- Force load for Cormorant Garamond -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg:#000000;
-      --copper:#b56633;   /* flame tone & line */
-      --headline:#a5542c; /* slightly lighter shade than before */
-      --soft:#d9d9d9;     /* tagline softer gray */
+      --copper:#b56633;
+      --headline:#a5542c;
+      --soft:#d9d9d9;
     }
 
     html, body {
@@ -37,7 +37,7 @@
     .wrap {
       min-height:100vh;
       display:flex;
-      align-items:flex-start;  
+      align-items:flex-start;
       justify-content:center;
       text-align:center;
       padding:8vh 4vw;
@@ -45,7 +45,6 @@
 
     .stack { max-width:900px; width:100%; }
 
-    /* logo image */
     .logo {
       width:min(400px, 58vw);
       height:auto;
@@ -53,7 +52,6 @@
       margin:0 auto -32px;
     }
 
-    /* FANG & FLAME */
     .brand {
       margin:0 0 28px;
       font-size:clamp(36px, 5vw, 56px);
@@ -72,7 +70,6 @@
       border-radius:2px;
     }
 
-    /* tagline */
     .tagline {
       margin:32px 0 0;
       font: italic 500 clamp(16px, 2.4vw, 22px)/1.4 Georgia, serif;
@@ -81,11 +78,14 @@
       text-shadow:0 0 3px rgba(0,0,0,0.4);
     }
 
-    /* Cormorant ampersand */
+    /* FORCE the ampersand to only use Cormorant */
     .amp {
-      font-family: "Cormorant Garamond", serif;
+      font-family: "Cormorant Garamond", serif !important;
       font-weight: 700;
-      display: inline-block;
+      font-size: 1em;
+      line-height: 1;
+      display:inline-block;
+      vertical-align: baseline;
     }
   </style>
 </head>
@@ -93,6 +93,7 @@
   <main class="wrap">
     <section class="stack">
       <img class="logo" src="fang-flame-logo.png" alt="Fang & Flame logo">
+      <!-- Ampersand wrapped in span -->
       <h1 class="brand">FANG <span class="amp">&amp;</span> FLAME</h1>
       <p class="tagline">The Fire is Calling...</p>
     </section>

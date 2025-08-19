@@ -15,18 +15,18 @@
   <meta property="og:url" content="https://www.thefangandflame.com/">
   <meta property="og:image" content="/fang-flame-logo.png">
 
-  <!-- Font for the open-top ampersand -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <!-- Font for open-top ampersand -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --bg:#000000;
       --copper:#b56633;   /* flame tone & line */
       --headline:#a5542c; /* slightly lighter shade than before */
       --soft:#d9d9d9;     /* tagline softer gray */
     }
 
-    html,body{
+    html, body {
       height:100%;
       margin:0;
       background:var(--bg);
@@ -34,37 +34,38 @@
       font-family:Georgia, 'Times New Roman', serif;
     }
 
-    .wrap{
+    .wrap {
       min-height:100vh;
       display:flex;
       align-items:flex-start;  
       justify-content:center;
       text-align:center;
-      padding:8vh 4vw;   /* move content further up */
+      padding:8vh 4vw;
     }
 
-    .stack{max-width:900px; width:100%;}
+    .stack { max-width:900px; width:100%; }
 
     /* logo image */
-    .logo{
-      width:min(400px, 58vw);   /* slightly smaller for balance */
+    .logo {
+      width:min(400px, 58vw);
       height:auto;
       display:block;
-      margin:0 auto -32px;      /* pull headline closer */
+      margin:0 auto -32px;
     }
 
     /* FANG & FLAME */
-    .brand{
-      margin:0 0 28px;          /* space headline from line */
+    .brand {
+      margin:0 0 28px;
       font-size:clamp(36px, 5vw, 56px);
-      letter-spacing:3px;       
+      letter-spacing:3px;
       color:var(--headline);
       font-weight:700;
     }
-    .brand::after{
+
+    .brand::after {
       content:"";
       display:block;
-      width:280px;              /* line lengthened */
+      width:280px;
       height:3px;
       margin:16px auto 0;
       background:linear-gradient(90deg, #8b4524, #c8783d, #8b4524);
@@ -72,17 +73,17 @@
     }
 
     /* tagline */
-    .tagline{
-      margin:32px 0 0;          
+    .tagline {
+      margin:32px 0 0;
       font: italic 500 clamp(16px, 2.4vw, 22px)/1.4 Georgia, serif;
       color:var(--soft);
       letter-spacing:.6px;
-      text-shadow:0 0 3px rgba(0,0,0,0.4); /* faint lift */
+      text-shadow:0 0 3px rgba(0,0,0,0.4);
     }
 
-    /* open-top ampersand */
+    /* Cormorant ampersand */
     .amp {
-      font-family: "Cinzel Decorative", serif;
+      font-family: "Cormorant Garamond", serif;
       font-weight: 700;
       display: inline-block;
     }

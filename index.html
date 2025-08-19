@@ -15,52 +15,54 @@
   <meta property="og:url" content="https://www.thefangandflame.com/">
   <meta property="og:image" content="/fang-flame-logo.png">
 
-  <!-- Force load for Cormorant Garamond -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
-
   <style>
-    :root {
+    :root{
       --bg:#000000;
-      --copper:#b56633;
-      --headline:#a5542c;
-      --soft:#d9d9d9;
+      --copper:#b56633;   /* flame tone & line */
+      --headline:#a5542c; /* headline copper */
+      --soft:#d9d9d9;     /* tagline softer gray */
     }
 
-    html, body {
+    html,body{
       height:100%;
       margin:0;
       background:var(--bg);
       color:#fff;
-      font-family:Georgia, 'Times New Roman', serif;
+      font-family:Georgia, "Times New Roman", serif;
     }
 
-    .wrap {
+    .wrap{
       min-height:100vh;
       display:flex;
-      align-items:flex-start;
+      align-items:flex-start;  
       justify-content:center;
       text-align:center;
-      padding:8vh 4vw;
+      padding:8vh 4vw;   /* move content further up */
     }
 
-    .stack { max-width:900px; width:100%; }
+    .stack{max-width:900px; width:100%;}
 
-    .logo {
+    /* logo image */
+    .logo{
       width:min(400px, 58vw);
       height:auto;
       display:block;
-      margin:0 auto -32px;
+      margin:0 auto -32px; /* pull headline closer */
     }
 
-    .brand {
+    /* FANG & FLAME */
+    .brand{
       margin:0 0 28px;
       font-size:clamp(36px, 5vw, 56px);
       letter-spacing:3px;
       color:var(--headline);
       font-weight:700;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5ch; /* space around ampersand */
     }
-
-    .brand::after {
+    .brand::after{
       content:"";
       display:block;
       width:280px;
@@ -70,34 +72,48 @@
       border-radius:2px;
     }
 
-    .tagline {
+    /* tagline */
+    .tagline{
       margin:32px 0 0;
       font: italic 500 clamp(16px, 2.4vw, 22px)/1.4 Georgia, serif;
       color:var(--soft);
       letter-spacing:.6px;
-      text-shadow:0 0 3px rgba(0,0,0,0.4);
+      text-shadow:0 0 3px rgba(0,0,0,.4);
     }
 
-    /* FORCE the ampersand to only use Cormorant */
-    .amp {
-  font-family: "Cormorant Garamond", "Times New Roman", Times, serif !important;
-  font-weight: 700 !important;
-  display: inline-block;
-  font-size: 1em;
-  line-height: 1;
-}
-
+    /* Inline SVG ampersand sizing/color */
+    .ampersand{
+      width:0.9em;      /* scale with text */
+      height:0.9em;
+      display:inline-block;
+      vertical-align:baseline;
+      fill:var(--headline);
+    }
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="stack">
       <img class="logo" src="fang-flame-logo.png" alt="Fang & Flame logo">
-      <!-- Ampersand wrapped in span -->
-      <h1 class="brand">FANG <span class="amp">&amp;</span> FLAME</h1>
+      <h1 class="brand">
+        <span>FANG</span>
+        <!-- Inline SVG — open-top ampersand (no webfont required) -->
+        <svg class="ampersand" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <!-- Stylized open-top ampersand -->
+          <path d="M70.8,69.5c-5.6,5.8-11.6,8.7-18.4,8.7c-14,0-23.9-9.2-23.9-22.3
+                   c0-12.7,9.9-22.6,23.1-22.6c6.7,0,12.4,2.2,17.4,6.9c2.2,2,2.2,5.2,0,7.2
+                   c-1.9,1.7-4.6,1.6-6.5-0.1c-3.8-3.4-7.3-4.9-11.4-4.9c-8.2,0-13.9,6-13.9,13.6
+                   c0,8.2,6,14,14.6,14c4.7,0,8.7-1.7,12.5-5.6l2.9-3.0l-6.7-6.7
+                   c-1.9-1.9-1.9-5.1,0-7.1c1.9-1.9,5.1-1.9,7.1,0l4.6,4.6l4.6-4.8
+                   c1.9-2,5.2-2,7.1-0.1c2,1.9,2,5.1,0.1,7.1l-6.0,6.2l5.5,5.5
+                   c2,2,2,5.2,0,7.2c-2,2-5.2,2-7.2,0l-4.4-4.4L70.8,69.5z" />
+          <!-- small crossbar flourish -->
+          <path d="M41,58 h18 a3,3 0 0 1 0,6 H41 a3,3 0 0 1 0-6 z"/>
+        </svg>
+        <span>FLAME</span>
+      </h1>
       <p class="tagline">The Fire is Calling...</p>
     </section>
   </main>
 </body>
 </html>
-

@@ -15,6 +15,9 @@
   <meta property="og:url" content="https://www.thefangandflame.com/">
   <meta property="og:image" content="/fang-flame-logo.png">
 
+  <!-- Google Font: Cormorant Garamond 700 (for headline only) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#000000;
@@ -50,13 +53,14 @@
       margin:0 auto -32px;      /* pull headline closer */
     }
 
-    /* FANG & FLAME */
+    /* Headline — force to Cormorant Garamond 700 */
     .brand{
-      margin:0 0 28px;          /* space headline from line */
+      margin:0 0 28px;
       font-size:clamp(36px, 5vw, 56px);
       letter-spacing:3px;       
       color:var(--headline);
-      font-weight:700;
+      font-weight:700 !important;
+      font-family:"Cormorant Garamond", serif !important;
     }
     .brand::after{
       content:"";

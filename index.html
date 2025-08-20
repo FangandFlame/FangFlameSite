@@ -23,11 +23,11 @@
       --soft:#d9d9d9;
     }
 
-    /* Self-hosted font */
+    /* Self-hosted font (in repo root) */
     @font-face {
       font-family: 'CormorantLocal';
-      src: url('/fonts/CormorantGaramond-Bold.ttf') format('truetype');
-      font-weight: 700;
+      src: url('/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+      font-weight: 100 900;
       font-style: normal;
     }
 
@@ -83,7 +83,7 @@
       text-shadow:0 0 3px rgba(0,0,0,0.4);
     }
 
-    /* Force ampersand to use only the self-hosted font */
+    /* Force only ampersand into Cormorant */
     .amp {
       font-family: 'CormorantLocal', serif !important;
       font-weight:700;

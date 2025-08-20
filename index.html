@@ -18,18 +18,9 @@
   <style>
     :root{
       --bg:#000000;
-      --copper:#b56633;
-      --headline:#a5542c;
-      --soft:#d9d9d9;
-    }
-
-    /* SELF-HOSTED FONT — file is in the REPO ROOT */
-    @font-face{
-      font-family: 'CormorantLocal';
-      src: url('/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
-      font-weight: 100 900;
-      font-style: normal;
-      font-display: swap;
+      --copper:#b56633;   /* flame tone & line */
+      --headline:#a5542c; /* slightly lighter shade than before */
+      --soft:#d9d9d9;     /* tagline softer gray */
     }
 
     html,body{
@@ -43,35 +34,34 @@
     .wrap{
       min-height:100vh;
       display:flex;
-      align-items:flex-start;
+      align-items:flex-start;  
       justify-content:center;
       text-align:center;
-      padding:8vh 4vw;
+      padding:8vh 4vw;   /* move content further up */
     }
 
     .stack{max-width:900px; width:100%;}
 
     /* logo image */
     .logo{
-      width:min(400px, 58vw);
+      width:min(400px, 58vw);   /* slightly smaller for balance */
       height:auto;
       display:block;
-      margin:0 auto -32px;
+      margin:0 auto -32px;      /* pull headline closer */
     }
 
-    /* HEADLINE — now fully Cormorant */
+    /* FANG & FLAME */
     .brand{
-      margin:0 0 28px;
-      font-family:'CormorantLocal', serif !important;
-      font-weight:700;
+      margin:0 0 28px;          /* space headline from line */
       font-size:clamp(36px, 5vw, 56px);
-      letter-spacing:3px;
+      letter-spacing:3px;       
       color:var(--headline);
+      font-weight:700;
     }
     .brand::after{
       content:"";
       display:block;
-      width:280px;
+      width:280px;              /* line lengthened */
       height:3px;
       margin:16px auto 0;
       background:linear-gradient(90deg, #8b4524, #c8783d, #8b4524);
@@ -80,11 +70,11 @@
 
     /* tagline */
     .tagline{
-      margin:32px 0 0;
+      margin:32px 0 0;          
       font: italic 500 clamp(16px, 2.4vw, 22px)/1.4 Georgia, serif;
       color:var(--soft);
       letter-spacing:.6px;
-      text-shadow:0 0 3px rgba(0,0,0,0.4);
+      text-shadow:0 0 3px rgba(0,0,0,0.4); /* faint lift */
     }
   </style>
 </head>

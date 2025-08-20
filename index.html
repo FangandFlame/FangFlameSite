@@ -23,10 +23,10 @@
       --soft:#d9d9d9;
     }
 
-    /* Self-hosted font (in repo root) */
+    /* Self-hosted font (absolute path to production) */
     @font-face {
       font-family: 'CormorantLocal';
-      src: url('/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+      src: url('https://www.thefangandflame.com/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
       font-weight: 100 900;
       font-style: normal;
     }
@@ -57,12 +57,14 @@
       margin:0 auto -32px;
     }
 
+    /* Headline now fully in Cormorant */
     .brand {
       margin:0 0 28px;
       font-size:clamp(36px, 5vw, 56px);
       letter-spacing:3px;
       color:var(--headline);
       font-weight:700;
+      font-family:'CormorantLocal', serif !important;
     }
 
     .brand::after {
@@ -82,20 +84,13 @@
       letter-spacing:.6px;
       text-shadow:0 0 3px rgba(0,0,0,0.4);
     }
-
-    /* Force only ampersand into Cormorant */
-    .amp {
-      font-family: 'CormorantLocal', serif !important;
-      font-weight:700;
-      display:inline-block;
-    }
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="stack">
       <img class="logo" src="fang-flame-logo.png" alt="Fang & Flame logo">
-      <h1 class="brand">FANG <span class="amp">&amp;</span> FLAME</h1>
+      <h1 class="brand">FANG &amp; FLAME</h1>
       <p class="tagline">The Fire is Calling...</p>
     </section>
   </main>

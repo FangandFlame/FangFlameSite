@@ -23,11 +23,12 @@
       --soft:#d9d9d9;     /* tagline softer gray */
     }
 
-    /* SELF-HOSTED FONT — file sits in repo root next to index.html */
+    /* SELF-HOSTED FONT — file sits in repo root next to index.html
+       Use fixed 700 weight + cache-bust to avoid variable-font quirks & caching */
     @font-face{
-      font-family:'CormorantLocal';
-      src:url('CormorantGaramond-VariableFont_wght.ttf') format('truetype');
-      font-weight:100 900;
+      font-family:"CormorantLocal";
+      src:url("CormorantGaramond-VariableFont_wght.ttf?v=1") format("truetype");
+      font-weight:700;
       font-style:normal;
       font-display:swap;
     }
@@ -43,7 +44,7 @@
     .wrap{
       min-height:100vh;
       display:flex;
-      align-items:flex-start;
+      align-items:flex-start;  
       justify-content:center;
       text-align:center;
       padding:8vh 4vw;   /* move content further up */
@@ -59,13 +60,13 @@
       margin:0 auto -32px;      /* pull headline closer */
     }
 
-    /* Headline — force to local Cormorant Garamond */
+    /* Headline — force to local Cormorant Garamond 700 */
     .brand{
       margin:0 0 28px;
-      font-family:'CormorantLocal', serif !important;
+      font-family:"CormorantLocal", serif !important;
       font-weight:700 !important;
       font-size:clamp(36px, 5vw, 56px);
-      letter-spacing:3px;
+      letter-spacing:3px;       
       color:var(--headline);
     }
     .brand::after{
@@ -80,7 +81,7 @@
 
     /* tagline */
     .tagline{
-      margin:32px 0 0;
+      margin:32px 0 0;          
       font: italic 500 clamp(16px, 2.4vw, 22px)/1.4 Georgia, serif;
       color:var(--soft);
       letter-spacing:.6px;

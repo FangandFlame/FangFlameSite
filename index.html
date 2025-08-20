@@ -23,11 +23,18 @@
       --soft:#d9d9d9;     /* tagline softer gray */
     }
 
-    /* SELF-HOSTED FONT — file sits in repo root next to index.html
-       Use fixed 700 weight + cache-bust to avoid variable-font quirks & caching */
+    /* SELF-HOSTED CORMORANT — using the STATIC Regular TTF in repo root */
     @font-face{
       font-family:"CormorantLocal";
-      src:url("CormorantGaramond-VariableFont_wght.ttf?v=1") format("truetype");
+      src:url("CormorantGaramond-Regular.ttf?v=1") format("truetype");
+      font-weight:400;          /* static Regular */
+      font-style:normal;
+      font-display:swap;
+    }
+    /* Map a "bold" face to the same file so 700 still works even if Bold.ttf isn't present yet */
+    @font-face{
+      font-family:"CormorantLocal";
+      src:url("CormorantGaramond-Regular.ttf?v=1") format("truetype");
       font-weight:700;
       font-style:normal;
       font-display:swap;
@@ -60,11 +67,11 @@
       margin:0 auto -32px;      /* pull headline closer */
     }
 
-    /* Headline — force to local Cormorant Garamond 700 */
+    /* Headline — force to local Cormorant */
     .brand{
       margin:0 0 28px;
       font-family:"CormorantLocal", serif !important;
-      font-weight:700 !important;
+      font-weight:700;          /* will use the mapped face above */
       font-size:clamp(36px, 5vw, 56px);
       letter-spacing:3px;       
       color:var(--headline);

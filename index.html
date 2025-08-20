@@ -16,30 +16,31 @@
   <meta property="og:image" content="/fang-flame-logo.png">
 
   <style>
-    :root {
+    :root{
       --bg:#000000;
       --copper:#b56633;
       --headline:#a5542c;
       --soft:#d9d9d9;
     }
 
-    /* Self-hosted font (absolute path to production) */
-    @font-face {
+    /* SELF-HOSTED FONT — file is in the REPO ROOT */
+    @font-face{
       font-family: 'CormorantLocal';
-      src: url('https://www.thefangandflame.com/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+      src: url('/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
       font-weight: 100 900;
       font-style: normal;
+      font-display: swap;
     }
 
-    html, body {
+    html,body{
       height:100%;
       margin:0;
       background:var(--bg);
       color:#fff;
-      font-family:Georgia, 'Times New Roman', serif;
+      font-family:Georgia, "Times New Roman", serif;
     }
 
-    .wrap {
+    .wrap{
       min-height:100vh;
       display:flex;
       align-items:flex-start;
@@ -48,26 +49,26 @@
       padding:8vh 4vw;
     }
 
-    .stack { max-width:900px; width:100%; }
+    .stack{max-width:900px; width:100%;}
 
-    .logo {
+    /* logo image */
+    .logo{
       width:min(400px, 58vw);
       height:auto;
       display:block;
       margin:0 auto -32px;
     }
 
-    /* Headline now fully in Cormorant */
-    .brand {
+    /* HEADLINE — now fully Cormorant */
+    .brand{
       margin:0 0 28px;
+      font-family:'CormorantLocal', serif !important;
+      font-weight:700;
       font-size:clamp(36px, 5vw, 56px);
       letter-spacing:3px;
       color:var(--headline);
-      font-weight:700;
-      font-family:'CormorantLocal', serif !important;
     }
-
-    .brand::after {
+    .brand::after{
       content:"";
       display:block;
       width:280px;
@@ -77,7 +78,8 @@
       border-radius:2px;
     }
 
-    .tagline {
+    /* tagline */
+    .tagline{
       margin:32px 0 0;
       font: italic 500 clamp(16px, 2.4vw, 22px)/1.4 Georgia, serif;
       color:var(--soft);

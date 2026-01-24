@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fang & Flame — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000;
+      --copper: #b56633;
+      --headline: #a5542c;
+      --soft: #d9d9d9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: Georgia, serif;
+      background: var(--bg);
+      color: var(--soft);
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+    }
+
+    /* === NAVIGATION with reverse corners === */
+    nav {
+      width: 200px;
+      background: var(--bg);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border: 2px solid var(--copper);
+      position: relative;
+      margin: 40px 0 0 20px;
+      clip-path: polygon(
+        20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% calc(100% - 20px),
+        calc(100% - 20px) 100%, 20px 100%, 0% calc(100% - 20px), 0% 20px
+      );
+      height: auto;
+    }
+
+    nav h1 {
+      font-family: 'Cinzel', serif;
+      color: var(--headline);
+      font-size: 22px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: var(--soft);
+      text-decoration: none;
+      margin-bottom: 20px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--copper);
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 40px 40px 30px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero img {
+      width: min(320px, 40vw);
+      height: auto;
+      margin-bottom: 16px;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 20px;
+      color: var(--soft);
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--headline);
+      font-size: 26px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: 0 auto 16px;
+      line-height: 1.6;
+      font-size: 17px;
+      text-align: center;
+    }
+
+    /* === GALLERY STYLING === */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+      justify-items: center;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      border: 2px solid var(--copper);
+      border-radius: 4px;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: var(--soft);
+      padding: 40px 0 20px;
+    }
+
+    footer a {
+      color: var(--copper);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        clip-path: none;
+        border: none;
+        margin: 0;
+        padding: 12px 20px;
+      }
+
+      nav h1 {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+
+      nav a {
+        margin-bottom: 0;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .hero img {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h1>Fang & Flame</h1>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <img src="fang-flame-logo.png" alt="Fang and Flame Logo">
+      <p class="tagline">The Fire is Calling...</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About the Brand</h2>
+      <p>Fang & Flame is a brand born in fire — hand-forged, wild, and unapologetically primal. We create custom cutting boards, BBQ aprons, and one-of-a-kind grill accessories for those who live close to the flame.</p>
+      <p>There’s more to the symbol than meets the eye… but that’s a story for those who seek it.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="products/board1.png" alt="Cutting Board">
+        <img src="products/apron1.png" alt="BBQ Apron">
+        <img src="products/tool1.png" alt="Grill Tool Set">
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Reach out anytime at <a href="mailto:contact@thefangandflame.com">contact@thefangandflame.com</a></p>
+    </section>
+
+    <footer>
+      &copy; 2025 Fang & Flame. All rights reserved.
+    </footer>
+
+  </main>
+</body>
+</html>
+
+
+
+

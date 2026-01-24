@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fang & Flame — Official Site</title>
+
+  <meta name="description" content="Fang & Flame — The Fire is Calling." />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #000000;
+      --copper: #b56633;
+      --headline: #a5542c;
+      --soft: #d9d9d9;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: #fff;
+      font-family: 'Cormorant Garamond', serif;
+      height: 100%;
+    }
+
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      padding: 8vh 4vw;
+    }
+
+    .stack {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .logo-link {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.04);
+    }
+
+    .logo {
+      width: min(400px, 58vw);
+      height: auto;
+      display: block;
+      margin: 0 auto -32px;
+    }
+
+    .brand {
+      margin: 0 0 28px;
+      font-size: clamp(44px, 6vw, 68px);
+      letter-spacing: 3px;
+      color: var(--headline);
+      font-weight: 800;
+    }
+
+    .brand .amp {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.85em;
+      vertical-align: middle;
+      display: inline-block;
+      transform: translateY(-2px);
+    }
+
+    .brand::after {
+      content: "";
+      display: block;
+      width: 280px;
+      height: 3px;
+      margin: 16px auto 0;
+      background: linear-gradient(90deg, #8b4524, #c8783d, #8b4524);
+      border-radius: 2px;
+    }
+
+    .tagline {
+      margin-top: 32px;
+      font: italic 500 clamp(16px, 2.4vw, 22px)/1.4 Georgia, serif;
+      color: var(--soft);
+      letter-spacing: .6px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="stack">
+      <a href="home.html" class="logo-link" aria-label="Enter Fang & Flame">
+        <img class="logo" src="fang-flame-logo.png" alt="Fang & Flame logo" />
+      </a>
+
+      <h1 class="brand">
+        FANG <span class="amp">&</span> FLAME
+      </h1>
+
+      <p class="tagline">The Fire is Calling…</p>
+    </section>
+  </main>
+</body>
+</html>
+
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fang & Flame — Home</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #000;
+      --copper: #b56633;
+      --headline: #a5542c;
+      --soft: #d9d9d9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: Georgia, serif;
+      background: var(--bg);
+      color: var(--soft);
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+    }
+
+    /* === NAVIGATION === */
+    nav {
+      width: 200px;
+      background: var(--bg);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 40px 0 0 20px;
+    }
+
+    nav a {
+      color: var(--soft);
+      text-decoration: none;
+      margin-bottom: 20px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--copper);
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 40px 40px 30px;
+    }
+
+    /* === HERO === */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero img {
+      width: min(360px, 45vw);
+      height: auto;
+      margin-bottom: 18px;
+    }
+
+    .brand-name {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: var(--headline);
+      font-size: 40px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 12px 20px;
+      }
+
+      nav a {
+        margin-bottom: 0;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .hero img {
+        width: 220px;
+      }
+
+      .brand-name {
+        font-size: 28px;
+        letter-spacing: 1.5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="hero">
+      <img src="fang-flame-logo.png" alt="Fang and Flame Logo">
+      <div class="brand-name">Fang &amp; Flame</div>
+    </section>
+  </main>
+
+</body>
+</html>
+
+

@@ -89,22 +89,6 @@
 
     .section{ margin-bottom:56px; }
 
-    .home-link{
-      text-align:center;
-      margin-top:100px;
-    }
-
-    .home-link a{
-      color: var(--accent);
-      text-decoration:none;
-      font-family:'Cinzel', serif;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      font-size:14px;
-    }
-
-    .home-link a:hover{ text-decoration:underline; }
-
     @media (max-width:768px){
       .header{
         flex-direction:column;
@@ -117,10 +101,59 @@
       }
       .content .spacer{ display:none; }
     }
+
+    body{ display:flex; }
+    .site-nav{
+      box-sizing:border-box;
+      flex:0 0 200px;
+      width:200px;
+      padding:24px 20px;
+      margin:40px 0 0 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      font-family:Georgia, serif;
+    }
+    .site-nav a{
+      color:var(--text);
+      text-decoration:none;
+      margin-bottom:20px;
+      font-size:16px;
+      letter-spacing:1px;
+      transition:color 0.3s ease;
+    }
+    .site-nav a:hover,
+    .site-nav a[aria-current="page"]{ color:var(--accent); }
+    .site-nav a:focus-visible{
+      outline:2px solid var(--accent);
+      outline-offset:5px;
+    }
+    .page{ box-sizing:border-box; flex:1; min-width:0; }
+    @media (max-width:768px){
+      body{ flex-direction:column; }
+      .site-nav{
+        flex:0 0 auto;
+        width:100%;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        align-items:center;
+        gap:12px;
+        margin:0;
+        padding:12px 20px;
+      }
+      .site-nav a{ margin-bottom:0; }
+    }
   </style>
 </head>
 
 <body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="home.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
   <main class="page">
 
     <div class="header">
@@ -175,9 +208,6 @@
       </div>
     </div>
 
-    <div class="home-link">
-      <a href="home.html">Home</a>
-    </div>
 
   </main>
 </body>
